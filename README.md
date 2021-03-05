@@ -1,2 +1,2 @@
-# JEE-Project
-Jave web project
+# WS-SOAP
+Jave web project with SOAP communication
