@@ -27,11 +27,11 @@ CREATE TABLE matriculas (
 
 UPDATE `hibernate_sequence` SET `next_val`=16 WHERE 1;
 
-INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (1,"Sergio","1107524154");
-INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (2,"Jose","123456");
-INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (3,"Andrea","3234126");
-INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (4,"Camila","12342134512");
-INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (5,"Jorge","123421345123");
+INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (1,"1107524154","Sergio");
+INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (2,"123456","Jose");
+INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (3,"3234126","Andrea");
+INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (4,"12342134512" ,"Camila");
+INSERT INTO `estudiantes`(`id`, `identificacion`, `nombre`) VALUES (5,"123421345123","Jorge");
 
 INSERT INTO `materias`(`id`, `nombre`, `serial`) VALUES (6,"matemáticas","12445");
 INSERT INTO `materias`(`id`, `nombre`, `serial`) VALUES (7,"historia","12342");

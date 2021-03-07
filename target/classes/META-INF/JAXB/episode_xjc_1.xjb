@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2021.03.06 a las 09:07:20 PM COT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://spring.io/guides/gs-producing-web-service">
+    <schemaBindings map="false">
+      <package name="io.spring.guides.gs_producing_web_service"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="io.spring.guides.gs_producing_web_service.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="io.spring.guides.gs_producing_web_service.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="io.spring.guides.gs_producing_web_service.Country"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.fullstack-test.com/estudiante">
+    <schemaBindings map="false">
+      <package name="com.fullstack_test.estudiante"/>
+    </schemaBindings>
+    <bindings scd="tns:addEstudianteRequest">
+      <class ref="com.fullstack_test.estudiante.AddEstudianteRequest"/>
+    </bindings>
+    <bindings scd="tns:addEstudianteResponse">
+      <class ref="com.fullstack_test.estudiante.AddEstudianteResponse"/>
+    </bindings>
+    <bindings scd="~tns:estudianteData">
+      <class ref="com.fullstack_test.estudiante.EstudianteData"/>
+    </bindings>
+    <bindings scd="~tns:serviceStatus">
+      <class ref="com.fullstack_test.estudiante.ServiceStatus"/>
+    </bindings>
+    <bindings scd="tns:deleteEstudianteRequest">
+      <class ref="com.fullstack_test.estudiante.DeleteEstudianteRequest"/>
+    </bindings>
+    <bindings scd="tns:deleteEstudianteResponse">
+      <class ref="com.fullstack_test.estudiante.DeleteEstudianteResponse"/>
+    </bindings>
+    <bindings scd="tns:getAllEstudiantesRequest">
+      <class ref="com.fullstack_test.estudiante.GetAllEstudiantesRequest"/>
+    </bindings>
+    <bindings scd="tns:getAllEstudiantesResponse">
+      <class ref="com.fullstack_test.estudiante.GetAllEstudiantesResponse"/>
+    </bindings>
+    <bindings scd="tns:getEstudianteByIdRequest">
+      <class ref="com.fullstack_test.estudiante.GetEstudianteByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getEstudianteByIdResponse">
+      <class ref="com.fullstack_test.estudiante.GetEstudianteByIdResponse"/>
+    </bindings>
+    <bindings scd="tns:updateEstudianteRequest">
+      <class ref="com.fullstack_test.estudiante.UpdateEstudianteRequest"/>
+    </bindings>
+    <bindings scd="tns:updateEstudianteResponse">
+      <class ref="com.fullstack_test.estudiante.UpdateEstudianteResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

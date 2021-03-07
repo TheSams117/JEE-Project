@@ -1,0 +1,99 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.fullstack-test.com/estudiante"
+           targetNamespace="http://www.fullstack-test.com/estudiante" elementFormDefault="qualified">
+
+	<xs:element name="addEstudianteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="identificacion" type="xs:string"/>
+                <xs:element name="nombre" type="xs:string"/>            	
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="addEstudianteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estudiante" type="tns:estudianteData"/>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="deleteEstudianteRequest">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="deleteEstudianteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="getAllEstudiantesRequest">
+         <xs:complexType/>
+    </xs:element>
+    
+    <xs:element name="getAllEstudiantesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estudiante" type="tns:estudianteData" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getEstudianteByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estudianteId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getEstudianteByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estudiante" type="tns:estudianteData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name="updateEstudianteRequest">
+        <xs:complexType>
+            <xs:sequence>
+	            <xs:element name="id" type="xs:long"/>
+	            <xs:element name="nombre" type="xs:string"/>
+	            <xs:element name="identificacion" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateEstudianteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="estudianteData">
+        <xs:sequence>
+        	<xs:element name="id" type="xs:long"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="identificacion" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="serviceStatus">
+        <xs:sequence>
+            <xs:element name="statusCode" type="xs:string"/>
+            <xs:element name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType> 
+</xs:schema>
