@@ -6,7 +6,7 @@
 //
 
 
-package com.fullstack_test.estudiante;
+package com.fullstack_test.materia;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -23,9 +23,6 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="estudianteId" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
- *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
@@ -34,28 +31,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "estudianteId"
-})
-@XmlRootElement(name = "getEstudianteByIdRequest")
-public class GetEstudianteByIdRequest {
+@XmlType(name = "")
+@XmlRootElement(name = "getAllMateriasRequest")
+public class GetAllMateriasRequest {
 
-    protected long estudianteId;
-
-    /**
-     * Obtiene el valor de la propiedad estudianteId.
-     * 
-     */
-    public long getEstudianteId() {
-        return estudianteId;
-    }
-
-    /**
-     * Define el valor de la propiedad estudianteId.
-     * 
-     */
-    public void setEstudianteId(long value) {
-        this.estudianteId = value;
-    }
 
 }

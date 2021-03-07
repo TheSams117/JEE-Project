@@ -6,8 +6,10 @@
 //
 
 
-package com.fullstack_test.estudiante;
+package com.fullstack_test.materia;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="serviceStatus" type="{http://www.fullstack-test.com/estudiante}serviceStatus"/&gt;
+ *         &lt;element name="materia" type="{http://www.fullstack-test.com/materia}materiaData" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "serviceStatus"
+    "materia"
 })
-@XmlRootElement(name = "updateEstudianteResponse")
-public class UpdateEstudianteResponse {
+@XmlRootElement(name = "getAllMateriasResponse")
+public class GetAllMateriasResponse {
 
     @XmlElement(required = true)
-    protected ServiceStatus serviceStatus;
+    protected List<MateriaData> materia;
 
     /**
-     * Obtiene el valor de la propiedad serviceStatus.
+     * Gets the value of the materia property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ServiceStatus }
-     *     
-     */
-    public ServiceStatus getServiceStatus() {
-        return serviceStatus;
-    }
-
-    /**
-     * Define el valor de la propiedad serviceStatus.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the materia property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ServiceStatus }
-     *     
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getMateria().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link MateriaData }
+     * 
+     * 
      */
-    public void setServiceStatus(ServiceStatus value) {
-        this.serviceStatus = value;
+    public List<MateriaData> getMateria() {
+        if (materia == null) {
+            materia = new ArrayList<MateriaData>();
+        }
+        return this.materia;
     }
 
 }

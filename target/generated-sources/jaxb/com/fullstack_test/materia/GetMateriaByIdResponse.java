@@ -2,11 +2,11 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2021.03.06 a las 09:07:20 PM COT 
+// Generado el: 2021.03.06 a las 10:09:39 PM COT 
 //
 
 
-package io.spring.guides.gs_producing_web_service;
+package com.fullstack_test.materia;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="materia" type="{http://www.fullstack-test.com/materia}materiaData"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name"
+    "materia"
 })
-@XmlRootElement(name = "getCountryRequest")
-public class GetCountryRequest {
+@XmlRootElement(name = "getMateriaByIdResponse")
+public class GetMateriaByIdResponse {
 
     @XmlElement(required = true)
-    protected String name;
+    protected MateriaData materia;
 
     /**
-     * Obtiene el valor de la propiedad name.
+     * Obtiene el valor de la propiedad materia.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link MateriaData }
      *     
      */
-    public String getName() {
-        return name;
+    public MateriaData getMateria() {
+        return materia;
     }
 
     /**
-     * Define el valor de la propiedad name.
+     * Define el valor de la propiedad materia.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link MateriaData }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setMateria(MateriaData value) {
+        this.materia = value;
     }
 
 }

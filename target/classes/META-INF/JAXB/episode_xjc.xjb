@@ -5,23 +5,9 @@
 Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2021.03.06 a las 09:07:20 PM COT 
+Generado el: 2021.03.06 a las 10:09:39 PM COT 
 
   -->
-  <bindings scd="x-schema::tns" xmlns:tns="http://spring.io/guides/gs-producing-web-service">
-    <schemaBindings map="false">
-      <package name="io.spring.guides.gs_producing_web_service"/>
-    </schemaBindings>
-    <bindings scd="tns:getCountryRequest">
-      <class ref="io.spring.guides.gs_producing_web_service.GetCountryRequest"/>
-    </bindings>
-    <bindings scd="tns:getCountryResponse">
-      <class ref="io.spring.guides.gs_producing_web_service.GetCountryResponse"/>
-    </bindings>
-    <bindings scd="~tns:country">
-      <class ref="io.spring.guides.gs_producing_web_service.Country"/>
-    </bindings>
-  </bindings>
   <bindings scd="x-schema::tns" xmlns:tns="http://www.fullstack-test.com/estudiante">
     <schemaBindings map="false">
       <package name="com.fullstack_test.estudiante"/>
@@ -61,6 +47,47 @@ Generado el: 2021.03.06 a las 09:07:20 PM COT
     </bindings>
     <bindings scd="tns:updateEstudianteResponse">
       <class ref="com.fullstack_test.estudiante.UpdateEstudianteResponse"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.fullstack-test.com/materia">
+    <schemaBindings map="false">
+      <package name="com.fullstack_test.materia"/>
+    </schemaBindings>
+    <bindings scd="tns:addMateriaRequest">
+      <class ref="com.fullstack_test.materia.AddMateriaRequest"/>
+    </bindings>
+    <bindings scd="tns:addMateriaResponse">
+      <class ref="com.fullstack_test.materia.AddMateriaResponse"/>
+    </bindings>
+    <bindings scd="~tns:materiaData">
+      <class ref="com.fullstack_test.materia.MateriaData"/>
+    </bindings>
+    <bindings scd="~tns:serviceStatus">
+      <class ref="com.fullstack_test.materia.ServiceStatus"/>
+    </bindings>
+    <bindings scd="tns:deleteMateriaRequest">
+      <class ref="com.fullstack_test.materia.DeleteMateriaRequest"/>
+    </bindings>
+    <bindings scd="tns:deleteMateriaResponse">
+      <class ref="com.fullstack_test.materia.DeleteMateriaResponse"/>
+    </bindings>
+    <bindings scd="tns:getAllMateriasRequest">
+      <class ref="com.fullstack_test.materia.GetAllMateriasRequest"/>
+    </bindings>
+    <bindings scd="tns:getAllMateriasResponse">
+      <class ref="com.fullstack_test.materia.GetAllMateriasResponse"/>
+    </bindings>
+    <bindings scd="tns:getMateriaByIdRequest">
+      <class ref="com.fullstack_test.materia.GetMateriaByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getMateriaByIdResponse">
+      <class ref="com.fullstack_test.materia.GetMateriaByIdResponse"/>
+    </bindings>
+    <bindings scd="tns:updateMateriaRequest">
+      <class ref="com.fullstack_test.materia.UpdateMateriaRequest"/>
+    </bindings>
+    <bindings scd="tns:updateMateriaResponse">
+      <class ref="com.fullstack_test.materia.UpdateMateriaResponse"/>
     </bindings>
   </bindings>
 </bindings>

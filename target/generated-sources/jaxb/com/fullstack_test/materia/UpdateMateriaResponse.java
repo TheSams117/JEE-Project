@@ -6,10 +6,11 @@
 //
 
 
-package com.fullstack_test.estudiante;
+package com.fullstack_test.materia;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="estudianteId" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="serviceStatus" type="{http://www.fullstack-test.com/materia}serviceStatus"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "estudianteId"
+    "serviceStatus"
 })
-@XmlRootElement(name = "getEstudianteByIdRequest")
-public class GetEstudianteByIdRequest {
+@XmlRootElement(name = "updateMateriaResponse")
+public class UpdateMateriaResponse {
 
-    protected long estudianteId;
+    @XmlElement(required = true)
+    protected ServiceStatus serviceStatus;
 
     /**
-     * Obtiene el valor de la propiedad estudianteId.
+     * Obtiene el valor de la propiedad serviceStatus.
      * 
+     * @return
+     *     possible object is
+     *     {@link ServiceStatus }
+     *     
      */
-    public long getEstudianteId() {
-        return estudianteId;
+    public ServiceStatus getServiceStatus() {
+        return serviceStatus;
     }
 
     /**
-     * Define el valor de la propiedad estudianteId.
+     * Define el valor de la propiedad serviceStatus.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link ServiceStatus }
+     *     
      */
-    public void setEstudianteId(long value) {
-        this.estudianteId = value;
+    public void setServiceStatus(ServiceStatus value) {
+        this.serviceStatus = value;
     }
 
 }

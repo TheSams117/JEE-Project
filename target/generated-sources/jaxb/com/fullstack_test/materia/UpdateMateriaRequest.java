@@ -6,26 +6,28 @@
 //
 
 
-package com.fullstack_test.estudiante;
+package com.fullstack_test.materia;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para serviceStatus complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="serviceStatus"&gt;
+ * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="statusCode" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="serial" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,63 +37,82 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "serviceStatus", propOrder = {
-    "statusCode",
-    "message"
+@XmlType(name = "", propOrder = {
+    "id",
+    "nombre",
+    "serial"
 })
-public class ServiceStatus {
+@XmlRootElement(name = "updateMateriaRequest")
+public class UpdateMateriaRequest {
 
+    protected long id;
     @XmlElement(required = true)
-    protected String statusCode;
+    protected String nombre;
     @XmlElement(required = true)
-    protected String message;
+    protected String serial;
 
     /**
-     * Obtiene el valor de la propiedad statusCode.
+     * Obtiene el valor de la propiedad id.
+     * 
+     */
+    public long getId() {
+        return id;
+    }
+
+    /**
+     * Define el valor de la propiedad id.
+     * 
+     */
+    public void setId(long value) {
+        this.id = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad nombre.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getStatusCode() {
-        return statusCode;
+    public String getNombre() {
+        return nombre;
     }
 
     /**
-     * Define el valor de la propiedad statusCode.
+     * Define el valor de la propiedad nombre.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setStatusCode(String value) {
-        this.statusCode = value;
+    public void setNombre(String value) {
+        this.nombre = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad message.
+     * Obtiene el valor de la propiedad serial.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMessage() {
-        return message;
+    public String getSerial() {
+        return serial;
     }
 
     /**
-     * Define el valor de la propiedad message.
+     * Define el valor de la propiedad serial.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMessage(String value) {
-        this.message = value;
+    public void setSerial(String value) {
+        this.serial = value;
     }
 
 }

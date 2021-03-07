@@ -1,0 +1,99 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.fullstack-test.com/materia"
+           targetNamespace="http://www.fullstack-test.com/materia" elementFormDefault="qualified">
+
+	<xs:element name="addMateriaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serial" type="xs:string"/>
+                <xs:element name="nombre" type="xs:string"/>            	
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="addMateriaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="materia" type="tns:materiaData"/>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="deleteMateriaRequest">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="deleteMateriaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="getAllMateriasRequest">
+         <xs:complexType/>
+    </xs:element>
+    
+    <xs:element name="getAllMateriasResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="materia" type="tns:materiaData" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMateriaByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="materiaId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMateriaByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="materia" type="tns:materiaData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name="updateMateriaRequest">
+        <xs:complexType>
+            <xs:sequence>
+	            <xs:element name="id" type="xs:long"/>
+	            <xs:element name="nombre" type="xs:string"/>
+	            <xs:element name="serial" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateMateriaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="materiaData">
+        <xs:sequence>
+        	<xs:element name="id" type="xs:long"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="serial" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="serviceStatus">
+        <xs:sequence>
+            <xs:element name="statusCode" type="xs:string"/>
+            <xs:element name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType> 
+</xs:schema>

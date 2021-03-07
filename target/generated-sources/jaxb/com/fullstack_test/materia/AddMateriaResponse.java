@@ -6,26 +6,27 @@
 //
 
 
-package com.fullstack_test.estudiante;
+package com.fullstack_test.materia;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para serviceStatus complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="serviceStatus"&gt;
+ * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="statusCode" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="materia" type="{http://www.fullstack-test.com/materia}materiaData"/&gt;
+ *         &lt;element name="serviceStatus" type="{http://www.fullstack-test.com/materia}serviceStatus"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,63 +36,64 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "serviceStatus", propOrder = {
-    "statusCode",
-    "message"
+@XmlType(name = "", propOrder = {
+    "materia",
+    "serviceStatus"
 })
-public class ServiceStatus {
+@XmlRootElement(name = "addMateriaResponse")
+public class AddMateriaResponse {
 
     @XmlElement(required = true)
-    protected String statusCode;
+    protected MateriaData materia;
     @XmlElement(required = true)
-    protected String message;
+    protected ServiceStatus serviceStatus;
 
     /**
-     * Obtiene el valor de la propiedad statusCode.
+     * Obtiene el valor de la propiedad materia.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link MateriaData }
      *     
      */
-    public String getStatusCode() {
-        return statusCode;
+    public MateriaData getMateria() {
+        return materia;
     }
 
     /**
-     * Define el valor de la propiedad statusCode.
+     * Define el valor de la propiedad materia.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link MateriaData }
      *     
      */
-    public void setStatusCode(String value) {
-        this.statusCode = value;
+    public void setMateria(MateriaData value) {
+        this.materia = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad message.
+     * Obtiene el valor de la propiedad serviceStatus.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ServiceStatus }
      *     
      */
-    public String getMessage() {
-        return message;
+    public ServiceStatus getServiceStatus() {
+        return serviceStatus;
     }
 
     /**
-     * Define el valor de la propiedad message.
+     * Define el valor de la propiedad serviceStatus.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ServiceStatus }
      *     
      */
-    public void setMessage(String value) {
-        this.message = value;
+    public void setServiceStatus(ServiceStatus value) {
+        this.serviceStatus = value;
     }
 
 }
