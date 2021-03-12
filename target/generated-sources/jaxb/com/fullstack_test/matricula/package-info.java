@@ -5,5 +5,5 @@
 // Generado el: 2021.03.12 a las 03:01:07 AM COT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.fullstack-test.com/estudiante", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.fullstack_test.estudiante;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.fullstack-test.com/matricula", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.fullstack_test.matricula;

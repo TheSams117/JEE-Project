@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.List;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -62,11 +60,9 @@ public class MatriculaServiceTest {
 		assertTrue(service.getAllMatricula().size() >= 6);
 
 		// Prueba para conuslta de materias por estudiante
-		List<Materia> materias = service.getMateriasEstudiante((long) 1);
 		assertTrue(service.getMateriasEstudiante((long) 1).size() >= 3);
 
 		// Prueba para conuslta de estudiantes por materia
-		List<Estudiante> estudiantes = service.getEstudiantesMateria((long) 7);
 		assertTrue(service.getEstudiantesMateria((long) 7).size() >= 2);
 
 	}

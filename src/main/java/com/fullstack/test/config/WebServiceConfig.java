@@ -35,6 +35,16 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return wsdl11Definition;
 	}
 
+	@Bean(name = "matriculas")
+	public DefaultWsdl11Definition defaultWsdl11DefinitionMatriculas(XsdSchema matriculasSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("Matriculaport");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.fullstack-test.com/matricula");
+		wsdl11Definition.setSchema(matriculasSchema);
+		return wsdl11Definition;
+	}
+
 	@Bean
 	public XsdSchema estudiantesSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("estudiantes.xsd"));
@@ -43,6 +53,11 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	@Bean
 	public XsdSchema materiasSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("materias.xsd"));
+	}
+
+	@Bean
+	public XsdSchema matriculasSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("matriculas.xsd"));
 	}
 
 	@Bean

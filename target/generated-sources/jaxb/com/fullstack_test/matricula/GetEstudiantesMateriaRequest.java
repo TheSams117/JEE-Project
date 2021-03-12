@@ -6,11 +6,10 @@
 //
 
 
-package com.fullstack_test.materia;
+package com.fullstack_test.matricula;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="serviceStatus" type="{http://www.fullstack-test.com/materia}serviceStatus"/&gt;
+ *         &lt;element name="materiaId" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "serviceStatus"
+    "materiaId"
 })
-@XmlRootElement(name = "updateMateriaResponse")
-public class UpdateMateriaResponse {
+@XmlRootElement(name = "getEstudiantesMateriaRequest")
+public class GetEstudiantesMateriaRequest {
 
-    @XmlElement(required = true)
-    protected ServiceStatus serviceStatus;
+    protected long materiaId;
 
     /**
-     * Obtiene el valor de la propiedad serviceStatus.
+     * Obtiene el valor de la propiedad materiaId.
      * 
-     * @return
-     *     possible object is
-     *     {@link ServiceStatus }
-     *     
      */
-    public ServiceStatus getServiceStatus() {
-        return serviceStatus;
+    public long getMateriaId() {
+        return materiaId;
     }
 
     /**
-     * Define el valor de la propiedad serviceStatus.
+     * Define el valor de la propiedad materiaId.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ServiceStatus }
-     *     
      */
-    public void setServiceStatus(ServiceStatus value) {
-        this.serviceStatus = value;
+    public void setMateriaId(long value) {
+        this.materiaId = value;
     }
 
 }

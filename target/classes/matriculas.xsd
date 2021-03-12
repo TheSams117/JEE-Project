@@ -1,0 +1,51 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.fullstack-test.com/matricula"
+           targetNamespace="http://www.fullstack-test.com/matricula" elementFormDefault="qualified">
+	
+	<xs:element name="getMateriasEstudianteRequest">
+         	         <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estudianteId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="getMateriasEstudianteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="materia" type="tns:materiaData" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+	<xs:element name="getEstudiantesMateriaRequest">
+	<xs:complexType>
+            <xs:sequence>
+                <xs:element name="materiaId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+
+	    </xs:element>
+	    
+	    <xs:element name="getEstudiantesMateriaResponse">
+	        <xs:complexType>
+	            <xs:sequence>
+	                <xs:element name="estudiante" type="tns:estudianteData" maxOccurs="unbounded"/>
+	            </xs:sequence>
+	        </xs:complexType>
+	    </xs:element>
+	<xs:complexType name="materiaData">
+        <xs:sequence>
+        	<xs:element name="id" type="xs:long"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="serial" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="estudianteData">
+        <xs:sequence>
+        	<xs:element name="id" type="xs:long"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="identificacion" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

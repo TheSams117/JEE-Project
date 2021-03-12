@@ -6,27 +6,27 @@
 //
 
 
-package com.fullstack_test.materia;
+package com.fullstack_test.matricula;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>Clase Java para materiaData complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType&gt;
+ * &lt;complexType name="materiaData"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="materia" type="{http://www.fullstack-test.com/materia}materiaData"/&gt;
- *         &lt;element name="serviceStatus" type="{http://www.fullstack-test.com/materia}serviceStatus"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="serial" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,64 +36,81 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "materia",
-    "serviceStatus"
+@XmlType(name = "materiaData", propOrder = {
+    "id",
+    "nombre",
+    "serial"
 })
-@XmlRootElement(name = "addMateriaResponse")
-public class AddMateriaResponse {
+public class MateriaData {
 
+    protected long id;
     @XmlElement(required = true)
-    protected MateriaData materia;
+    protected String nombre;
     @XmlElement(required = true)
-    protected ServiceStatus serviceStatus;
+    protected String serial;
 
     /**
-     * Obtiene el valor de la propiedad materia.
+     * Obtiene el valor de la propiedad id.
+     * 
+     */
+    public long getId() {
+        return id;
+    }
+
+    /**
+     * Define el valor de la propiedad id.
+     * 
+     */
+    public void setId(long value) {
+        this.id = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad nombre.
      * 
      * @return
      *     possible object is
-     *     {@link MateriaData }
+     *     {@link String }
      *     
      */
-    public MateriaData getMateria() {
-        return materia;
+    public String getNombre() {
+        return nombre;
     }
 
     /**
-     * Define el valor de la propiedad materia.
+     * Define el valor de la propiedad nombre.
      * 
      * @param value
      *     allowed object is
-     *     {@link MateriaData }
+     *     {@link String }
      *     
      */
-    public void setMateria(MateriaData value) {
-        this.materia = value;
+    public void setNombre(String value) {
+        this.nombre = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad serviceStatus.
+     * Obtiene el valor de la propiedad serial.
      * 
      * @return
      *     possible object is
-     *     {@link ServiceStatus }
+     *     {@link String }
      *     
      */
-    public ServiceStatus getServiceStatus() {
-        return serviceStatus;
+    public String getSerial() {
+        return serial;
     }
 
     /**
-     * Define el valor de la propiedad serviceStatus.
+     * Define el valor de la propiedad serial.
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceStatus }
+     *     {@link String }
      *     
      */
-    public void setServiceStatus(ServiceStatus value) {
-        this.serviceStatus = value;
+    public void setSerial(String value) {
+        this.serial = value;
     }
 
 }

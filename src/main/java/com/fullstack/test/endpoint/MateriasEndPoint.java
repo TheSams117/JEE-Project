@@ -70,7 +70,7 @@ public class MateriasEndPoint {
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllMateriasRequest")
 	@ResponsePayload
-	public GetAllMateriasResponse getAllEstudiante(@RequestPayload GetAllMateriasRequest request) {
+	public GetAllMateriasResponse getAllMaterias(@RequestPayload GetAllMateriasRequest request) {
 		GetAllMateriasResponse response = new GetAllMateriasResponse();
 		List<MateriaData> materiaData = response.getMateria();
 		List<Materia> materias = service.getAllMaterias();
@@ -87,7 +87,7 @@ public class MateriasEndPoint {
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getMateriaByIdRequest")
 	@ResponsePayload
-	public GetMateriaByIdResponse getEstudiante(@RequestPayload GetMateriaByIdRequest request) {
+	public GetMateriaByIdResponse getMateria(@RequestPayload GetMateriaByIdRequest request) {
 		GetMateriaByIdResponse response = new GetMateriaByIdResponse();
 		MateriaData materia = new MateriaData();
 		BeanUtils.copyProperties(service.getMateriaById(request.getMateriaId()), materia);
@@ -98,7 +98,7 @@ public class MateriasEndPoint {
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateMateriaRequest")
 	@ResponsePayload
-	public UpdateMateriaResponse updateEstudiante(@RequestPayload UpdateMateriaRequest request) {
+	public UpdateMateriaResponse updateMateria(@RequestPayload UpdateMateriaRequest request) {
 		UpdateMateriaResponse response = new UpdateMateriaResponse();
 		ServiceStatus serviceStatus = new ServiceStatus();
 		Materia materia = service.getMateriaById(request.getId());
